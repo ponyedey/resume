@@ -1,5 +1,5 @@
 body{
-  background: white;
+  background: #efefef;
   margin: 0;
 }
 a{
@@ -194,13 +194,15 @@ main .self-introduction{
   line-height: 1.8;
   font-size: 22px;
 }
-section.skills{
+section.skills,
+section.portfolio{
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
 }
-section.skills h2{
+section.skills h2,
+section.portfolio h2{
   text-align: center;
   color: #3d4451;
   font-size: 34px;
@@ -237,4 +239,57 @@ section.skills .progressBar > .progress{
   height: 100%;
   background: #e6686a;
   border-radius: 5px;
+}
+section.portfolio{
+  text-align: center;
+  margin-bottom: 100px;
+}
+section.portfolio > nav{
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+section.portfolio > nav > ol{
+  display: inline-block;
+  vertical-align: top;
+}
+section.portfolio > nav > ol > li{
+  float: left;
+  margin-right: 40px;
+  cursor: pointer;
+}
+section.portfolio > nav > ol > li:nth-child(3){
+  margin-right: 0;
+}
+section.portfolio > nav .bar{
+  height: 5px;
+  background: white;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+section.portfolio > nav .bar-inner{
+  height: 100%;
+  background: #e6686a;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+section.portfolio > nav .bar.state-1 .bar-inner{
+  margin-left: 0;
+  width: 50px;
+}
+section.portfolio > nav .bar.state-2 .bar-inner{
+  margin-left: 80px;
+  width: 40px;
+}
+section.portfolio > nav .bar.state-3 .bar-inner{
+  margin-left: 160px;
+  width: 31px;
+}
+section.portfolio .cats{
+  position: relative;
+}
+section.portfolio .cats > .big,
+section.portfolio .cats > .small{
+  position: absolute;
 }
